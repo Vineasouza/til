@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.createConnection('mongodb://localhost/noderest', { 
-  useNewUrlParser: true, 
+mongoose.connect('mongodb://localhost/noderest', { 
+  useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true 
+  useCreateIndex: true
 })
 .then(response => console.log('Conected to Database..'))
 .catch(error => console.log('error ->', error.message));
