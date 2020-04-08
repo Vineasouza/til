@@ -9,21 +9,19 @@ const bot = new Twit({
     timeout_ms: 60 * 1000,
 });
 
-//  tweet something  //
-bot.post('statuses/update', { status: 'hello world!' }, function(err, data, response) {
-    // console.log(err);
-    console.log(data);
-    // console.log(response);
-});
+var cont = 0;
 
-//  search twitter for all tweets containing the word ' ' since ...  //
-bot.get('search/tweets', { q: 'babu since:2020-03-30', count: 2 }, function(err, data, response) {
-    console.log(data)
-})
+function botTweet() {
+    //  tweet something  //
+    bot.post('statuses/update', { status: 'O vineasouza é lindo #' + cont++ }, function(err, data, response) {
+        if(err) console.log(err); 
+        else console.log('Tweetado');
+        // console.log(data);
+        // console.log(response);
+    });
+}
 
-//  get the list of user id's that follow @...  //
-bot.get('followers/ids', { screen_name: 'vineasouza' },  function (err, data, response) {
-    console.log(data)
-  })
+setInterval(botTweet, 10*1000);
+
 
 
