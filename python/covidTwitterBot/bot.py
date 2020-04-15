@@ -22,7 +22,8 @@ r = requests.get(url)
 s = BeautifulSoup(r.text,"html.parser")
 data = s.find_all("div",class_ = "maincounter-number")
 
+# console log
 print("Total Casos: "+ data[0].text.strip() + "\nTotal Mortes: " + data[1].text.strip () + "\nTotal Recuperados: " + data[2].text.strip())
 
-# tweet something
+# tweet stats
 #api.update_status("Total Casos: "+ data[0].text.strip() + "\nTotal Mortes: " + data[1].text.strip () + "\nTotal Recuperados: " + data[2].text.strip())
