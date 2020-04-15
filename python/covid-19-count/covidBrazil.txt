@@ -1,3 +1,3 @@
-Total Cases: 24,920
-Total Deaths: 1,489
-Total Recovered: 3,046
+Total Cases: 25,262
+Total Deaths: 1,532
+Total Recovered: 14,026
