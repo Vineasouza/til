@@ -1,6 +1,7 @@
 import tweepy
 import settings
-import requests 
+import requests
+import datetime 
 from bs4 import BeautifulSoup
 from threading import Timer
 
@@ -22,8 +23,11 @@ r = requests.get(url)
 s = BeautifulSoup(r.text,"html.parser")
 data = s.find_all("div",class_ = "maincounter-number")
 
+#getting date
+now = datetime.datetime.now()
+
 # console log
-print("Total Casos: "+ data[0].text.strip() + "\nTotal Mortes: " + data[1].text.strip () + "\nTotal Recuperados: " + data[2].text.strip())
+print(now.strftime("%Y-%m-%d %H:%M:%S") + "\nTotal Casos: "+ data[0].text.strip() + "\nTotal Mortes: " + data[1].text.strip () + "\nTotal Recuperados: " + data[2].text.strip())
 
 # tweet stats
 #api.update_status("Total Casos: "+ data[0].text.strip() + "\nTotal Mortes: " + data[1].text.strip () + "\nTotal Recuperados: " + data[2].text.strip())
