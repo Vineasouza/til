@@ -3,6 +3,7 @@ import settings
 import requests
 import datetime 
 import os
+from pytz import timezone
 from bs4 import BeautifulSoup
 from threading import Timer
 from flask import Flask
@@ -22,28 +23,33 @@ auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 # Create API object
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
-# getting data
-url = "https://www.worldometers.info/coronavirus/country/brazil/"
-r = requests.get(url)
-s = BeautifulSoup(r.text,"html.parser")
-data = s.find_all("div",class_ = "maincounter-number")
-
-# console log
-#print(now.strftime("%Y-%m-%d %H:%M:%S") + "\nTotal Casos: "+ data[0].text.strip() + "\nTotal Mortes: " + data[1].text.strip () + "\nTotal Recuperados: " + data[2].text.strip())
-
 @app.route("/")
 # tweet stats
 def tweet():
     #getting date
     now = datetime.datetime.now()
+    fuso_horario = timezone('America/Sao_Paulo')
+    nowtime = now.astimezone(fuso_horario)
 
-    api.update_status("--" + now.strftime("%Y-%m-%d %H:%M:%S") + "--" + "\nTotal Casos: "+ data[0].text.strip() + "\nTotal Mortes: " + data[1].text.strip () + "\nTotal Recuperados: " + data[2].text.strip())
+    # getting data from brazil
+    url = "https://www.worldometers.info/coronavirus/country/brazil/"
+    r = requests.get(url)
+    s = BeautifulSoup(r.text,"html.parser")
+    data = s.find_all("div",class_ = "maincounter-number")
 
-    print("tweetado " + now.strftime("%Y-%m-%d %H:%M:%S"))
+    # getting data from world
+    url2 = "https://www.worldometers.info/coronavirus/"
+    r2 = requests.get(url2)
+    s2 = BeautifulSoup(r2.text,"html.parser")
+    data2 = s2.find_all("div",class_ = "maincounter-number")
 
-    Timer(3600.0, tweet).start()
+    api.update_status("--" + nowtime.strftime("%Y-%m-%d %H:%M") + "--" + "\nTotal Casos: 🇧🇷 "+ data[0].text.strip() + " // 🌎 " + data2[0].text.strip() + "\nTotal Mortes: 🇧🇷 " + data[1].text.strip() + " // 🌎 " + data2[1].text.strip() + "\nTotal Recuperados: 🇧🇷 " + data[2].text.strip()+ " // 🌎 " + data2[2].text.strip())
 
-Timer(3600.0, tweet).start()
+    print("tweetado " + nowtime.strftime("%Y-%m-%d %H:%M"))
+
+    Timer(5400.0, tweet).start()
+
+Timer(5400.0, tweet).start()
 
 
 if __name__ == "__main__":
