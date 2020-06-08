@@ -45,5 +45,5 @@ def rep():
     with open('covidrecovered.csv', 'a+', newline='') as file:
         writer = csv.writer(file, delimiter=',')
         writer.writerow(row_list4)
-    Timer(10.0, rep).start()
-Timer(10.0, rep).start()
+    Timer(3600.0, rep).start()
+Timer(3600.0, rep).start()
