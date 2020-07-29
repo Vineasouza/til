@@ -9,7 +9,7 @@ df['polaridade'] = df['polaridade'].astype(float)
 print(df)
 
 #convert de CSV to JSON string
-df.to_json (r'datasetReviewed.json')
+df.to_csv (r'datasetReviewed-2.csv')
 
 
 
