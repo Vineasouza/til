@@ -20,7 +20,9 @@ sudo apt-get clean -y
 echo
 echo "Cache das Atualizacoes Limpo...........................................................[ OK ]";
 echo
-sleep 3
+sleep 1
+
+clear
 
 echo
 echo "Atualizar Base dados das Atualizacoes........................................................";
@@ -30,8 +32,9 @@ sudo apt-get update
 echo
 echo "Base de dados Atualizadas..............................................................[ OK ]";
 echo
-sleep 3
+sleep 1
 
+clear
 
 echo
 echo "Corrigindo Problemas com dependencias........................................................";
@@ -41,9 +44,9 @@ sudo apt-get install -f -y
 echo
 echo "Problemas com dependencias Corrigindos.................................................[ OK ]";
 echo
-sleep 3
+sleep 1
 
-
+clear
 
 echo
 echo "Reparando Problemas..........................................................................";
@@ -54,9 +57,9 @@ sudo apt --fix-broken install
 echo
 echo "Problemas Reparados....................................................................[ OK ]";
 echo
-sleep 3
+sleep 1
 
-
+clear
 
 echo
 echo "Baixando e Instalando as Atualizacoes........................................................";
@@ -66,7 +69,7 @@ sudo apt-get upgrade -f -y
 echo
 echo "Atualizacoes Instaladas................................................................[ OK ]";
 echo
-sleep 3
+sleep 1
 
 
 echo
@@ -78,7 +81,9 @@ sudo apt-get full-upgrade -f -y
 echo
 echo "Atualizacoes das distribuicoes Instaladas..............................................[ OK ]";
 echo
-sleep 3
+sleep 1
+
+clear
 
 echo
 echo "Verificando pacotes antigos ou duplicados....................................................";
@@ -88,8 +93,9 @@ sudo apt-get autoclean -y
 echo
 echo "Pacotes antigos ou duplicados removidos................................................[ OK ]";
 echo
-sleep 3
+sleep 1
 
+clear
 
 echo
 echo "Procurando pacotes desnecessarios............................................................";
@@ -99,6 +105,6 @@ sudo apt-get autoremove -f -y
 echo
 echo "Pacotes desnecessario Removidos........................................................[ OK ]";
 echo
-sleep 3 
+sleep 1 
 
 exit 0
