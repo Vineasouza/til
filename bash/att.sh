@@ -1,110 +1,109 @@
 #!/bin/bash
-### BEGIN INIT INFO
-# Provides:          atualizar.sh
-# Required-Start:    $local_fs $remote_fs $network $syslog
-# Required-Stop:     $local_fs $remote_fs $network $syslog
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: Update, fixes
-# Description:       Complete system upgrade, clean unnecessary packages, remove only old or duplicate packages.
-### END INIT INFO
 
+# hide cursor
+tput civis -- invisible
 
+Green='\033[0;32m' 
+NC='\033[0m'
 
 clear
+
 echo
-echo "Limpando o cache das Atualizacoes............................................................";
+echo -ne "Limpando o cache das Atualizacoes......................................................[    ]";
 echo
 ################# Baixando e Instalando Atualiza��es ###############################
 sudo apt-get clean -y
 echo
-echo "Cache das Atualizacoes Limpo...........................................................[ OK ]";
+echo -ne "Cache das Atualizacoes Limpo...........................................................[ ${Green}OK${NC} ]";
 echo
 sleep 1
 
 clear
 
 echo
-echo "Atualizar Base dados das Atualizacoes........................................................";
+echo -ne "Atualizar Base dados das Atualizacoes..................................................[    ]";
 echo
 ####################### Atualizar Base dados #######################################
 sudo apt-get update
 echo
-echo "Base de dados Atualizadas..............................................................[ OK ]";
+echo -ne "Base de dados Atualizadas..............................................................[ ${Green}OK${NC} ]";
 echo
 sleep 1
 
 clear
 
 echo
-echo "Corrigindo Problemas com dependencias........................................................";
+echo -ne "Corrigindo Problemas com dependencias..................................................[    ]";
 echo
 ################# Corrigindo Problemas com dependencias ############################
 sudo apt-get install -f -y
 echo
-echo "Problemas com dependencias Corrigindos.................................................[ OK ]";
+echo -ne "Problemas com dependencias Corrigindos.................................................[ ${Green}OK${NC} ]";
 echo
 sleep 1
 
 clear
 
 echo
-echo "Reparando Problemas..........................................................................";
+echo -ne "Reparando Problemas....................................................................[    ]";
 echo
 ################# Corrigindo Problemas com dependencias ############################
 sudo dpkg --configure -a
 sudo apt --fix-broken install
 echo
-echo "Problemas Reparados....................................................................[ OK ]";
+echo -ne "Problemas Reparados....................................................................[ ${Green}OK${NC} ]";
 echo
 sleep 1
 
 clear
 
 echo
-echo "Baixando e Instalando as Atualizacoes........................................................";
+echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
 echo
 ################# Baixando e Instalando Atualiza��es ###############################
 sudo apt-get upgrade -f -y
 echo
-echo "Atualizacoes Instaladas................................................................[ OK ]";
+echo -ne "Atualizacoes Instaladas................................................................[ ${Green}OK${NC} ]";
 echo
 sleep 1
 
+clear
 
 echo
-echo "Baixando e Instalando Atualizacoes das distribuicoes.........................................";
+echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
 echo
 ################# Baixando e Instalando Atualiza��es ###############################
 sudo apt-get dist-upgrade -f -y
 sudo apt-get full-upgrade -f -y
 echo
-echo "Atualizacoes das distribuicoes Instaladas..............................................[ OK ]";
+echo -ne "Atualizacoes das distribuicoes Instaladas..............................................[ ${Green}OK${NC} ]";
 echo
 sleep 1
 
 clear
 
 echo
-echo "Verificando pacotes antigos ou duplicados....................................................";
+echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
 echo
 ################# Baixando e Instalando Atualiza��es ###############################
 sudo apt-get autoclean -y
 echo
-echo "Pacotes antigos ou duplicados removidos................................................[ OK ]";
+echo -ne "Pacotes antigos ou duplicados removidos................................................[ ${Green}OK${NC} ]";
 echo
 sleep 1
 
 clear
 
 echo
-echo "Procurando pacotes desnecessarios............................................................";
+echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
 echo
 ################# Baixando e Instalando Atualiza��es ###############################
 sudo apt-get autoremove -f -y
 echo
-echo "Pacotes desnecessario Removidos........................................................[ OK ]";
+echo -ne "Pacotes desnecessario Removidos........................................................[ ${Green}OK${NC} ]";
 echo
 sleep 1 
 
+# back the cursor
+tput cnorm -- inormal
 exit 0
