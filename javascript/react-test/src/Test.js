@@ -7,9 +7,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
     '& .MuiTextField-root': {
         margin: theme.spacing(1),
-        width: '454px',
-        borderColor: "#08082D",
-        borderWidth: '7px',     
+        width: '454px',    
     },
     },
 }));
@@ -25,7 +23,6 @@ export default function FormPropsTextFields() {
             id="outlined-required"
             label="Nome"
             defaultValue=" "
-            variant="outlined"
             helperText="Escreva seu nome completo"
             input
             InputProps={{
@@ -39,7 +36,7 @@ export default function FormPropsTextFields() {
             id="outlined-required"
             label="Especialidade"
             defaultValue=" "
-            variant="outlined"
+            variant="filled"
             helperText="Sua área de especialidade"
             />
         </div>
