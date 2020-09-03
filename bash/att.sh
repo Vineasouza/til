@@ -13,17 +13,17 @@ echo -ne "Limpando o cache das Atualizacoes.....................................
 echo
 echo -ne "Atualizar Base dados das Atualizacoes..................................................[    ]";
 echo
-echo -ne "Corrigindo Problemas com dependencias..................................................[    ]";
+echo -ne "Corrigir Problemas com dependencias....................................................[    ]";
 echo
-echo -ne "Reparando Problemas....................................................................[    ]";
+echo -ne "Reparar Problemas......................................................................[    ]";
 echo
-echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
+echo -ne "Baixar e Instalar as Atualizacoes......................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ############################# Baixando e Instalando Atualiza��es ####################################################
 sudo apt-get clean -y
@@ -34,17 +34,17 @@ echo -ne "Cache das Atualizacoes Limpo..........................................
 echo
 echo -ne "Atualizar Base dados das Atualizacoes..................................................[    ]";
 echo
-echo -ne "Corrigindo Problemas com dependencias..................................................[    ]";
+echo -ne "Corrigir Problemas com dependencias....................................................[    ]";
 echo
-echo -ne "Reparando Problemas....................................................................[    ]";
+echo -ne "Reparar Problemas......................................................................[    ]";
 echo
-echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
+echo -ne "Baixar e Instalar as Atualizacoes......................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ######################################################################################################################
 sleep 5
@@ -55,17 +55,17 @@ echo -ne "Cache das Atualizacoes Limpo..........................................
 echo
 echo -ne "Atualizar Base dados das Atualizacoes..................................................[    ]";
 echo
-echo -ne "Corrigindo Problemas com dependencias..................................................[    ]";
+echo -ne "Corrigir Problemas com dependencias....................................................[    ]";
 echo
-echo -ne "Reparando Problemas....................................................................[    ]";
+echo -ne "Reparar Problemas......................................................................[    ]";
 echo
-echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
+echo -ne "Baixar e Instalar as Atualizacoes......................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ####################################### Atualizar Base dados #######################################################
 sudo apt-get update
@@ -75,17 +75,17 @@ echo -ne "Cache das Atualizacoes Limpo..........................................
 echo
 echo -ne "Base de dados Atualizadas..............................................................[ ${Green}OK${NC} ]";
 echo
-echo -ne "Corrigindo Problemas com dependencias..................................................[    ]";
+echo -ne "Corrigir Problemas com dependencias....................................................[    ]";
 echo
-echo -ne "Reparando Problemas....................................................................[    ]";
+echo -ne "Reparar Problemas......................................................................[    ]";
 echo
-echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
+echo -ne "Baixar e Instalar as Atualizacoes......................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ######################################################################################################################
 sleep 5
@@ -98,15 +98,16 @@ echo -ne "Base de dados Atualizadas.............................................
 echo
 echo -ne "Corrigindo Problemas com dependencias..................................................[    ]";
 echo
-echo -ne "Reparando Problemas....................................................................[    ]";
+echo -ne "Reparar Problemas......................................................................[    ]";
 echo
-echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
+echo -ne "Baixar e Instalar as Atualizacoes......................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
+echo
 echo
 ########################## Corrigindo Problemas com dependencias #####################################################
 sudo apt-get install -f -y
@@ -119,15 +120,16 @@ echo -ne "Base de dados Atualizadas.............................................
 echo
 echo -ne "Problemas com dependencias Corrigindos.................................................[ ${Green}OK${NC} ]";
 echo
-echo -ne "Reparando Problemas....................................................................[    ]";
+echo -ne "Reparar Problemas......................................................................[    ]";
 echo
-echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
+echo -ne "Baixar e Instalar as Atualizacoes......................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
+echo
 echo
 ######################################################################################################################
 sleep 5
@@ -142,14 +144,13 @@ echo -ne "Problemas com dependencias Corrigindos................................
 echo
 echo -ne "Reparando Problemas....................................................................[    ]";
 echo
-echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
+echo -ne "Baixar e Instalar as Atualizacoes......................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
-echo
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ################################# Corrigindo Problemas com dependencias ##############################################
 sudo dpkg --configure -a
@@ -165,13 +166,13 @@ echo -ne "Problemas com dependencias Corrigindos................................
 echo
 echo -ne "Problemas Reparados....................................................................[ ${Green}OK${NC} ]";
 echo
-echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
+echo -ne "Baixar e Instalar as Atualizacoes......................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 echo
 ######################################################################################################################
@@ -189,11 +190,11 @@ echo -ne "Problemas Reparados...................................................
 echo
 echo -ne "Baixando e Instalando as Atualizacoes..................................................[    ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ############################## Baixando e Instalando Atualiza��es ##################################################
 sudo apt-get upgrade -f -y
@@ -210,11 +211,11 @@ echo -ne "Problemas Reparados...................................................
 echo
 echo -ne "Atualizacoes Instaladas................................................................[ ${Green}OK${NC} ]";
 echo
-echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
+echo -ne "Baixar e Instalar Atualizacoes das distribuicoes.......................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ######################################################################################################################
 sleep 5
@@ -233,9 +234,9 @@ echo -ne "Atualizacoes Instaladas...............................................
 echo
 echo -ne "Baixando e Instalando Atualizacoes das distribuicoes...................................[    ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ################################ Baixando e Instalando Atualiza��es #################################################
 sudo apt-get dist-upgrade -f -y
@@ -255,9 +256,9 @@ echo -ne "Atualizacoes Instaladas...............................................
 echo
 echo -ne "Atualizacoes das distribuicoes Instaladas..............................................[ ${Green}OK${NC} ]";
 echo
-echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
+echo -ne "Verificar pacotes antigos ou duplicados................................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ######################################################################################################################
 sleep 5
@@ -278,7 +279,7 @@ echo -ne "Atualizacoes das distribuicoes Instaladas.............................
 echo
 echo -ne "Verificando pacotes antigos ou duplicados..............................................[    ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ################################## Baixando e Instalando Atualiza��es ###############################################
 sudo apt-get autoclean -y
@@ -299,7 +300,7 @@ echo -ne "Atualizacoes das distribuicoes Instaladas.............................
 echo
 echo -ne "Pacotes antigos ou duplicados removidos................................................[ ${Green}OK${NC} ]";
 echo
-echo -ne "Procurando pacotes desnecessarios......................................................[    ]";
+echo -ne "Procurar pacotes desnecessarios........................................................[    ]";
 echo
 ######################################################################################################################
 sleep 5
