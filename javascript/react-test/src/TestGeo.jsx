@@ -1,7 +1,7 @@
 import Geocode from "react-geocode";
 import React from  'react'
 
-Geocode.setApiKey("AIzaSyDzVYTrAJKeR3FN4dxOgtvKcrsdUKIWDx4");
+Geocode.setApiKey("");
 Geocode.enableDebug();
 
 Geocode.fromLatLng("48.8583701", "2.2922926").then(
