@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestGeo from './TestGeo';
+import NumberFormat from './NumberFormat';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <TestGeo/>
+    <NumberFormat/>
   </React.StrictMode>,
   document.getElementById('root')
 );
