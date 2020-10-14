@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NumberFormat from './NumberFormat';
+import  Multiselect from './multiselect';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NumberFormat/>
+    <Multiselect/>
   </React.StrictMode>,
   document.getElementById('root')
 );
