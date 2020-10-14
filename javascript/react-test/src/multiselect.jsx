@@ -1,19 +1,13 @@
-import React, {useState } from 'react';
-import './NumberFormat.css';
-import MultiSelect from "react-multi-select-component";
-// import arrayHealthPlans from './utils/healthPlans';
-
-
+import React, { useState } from 'react';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+import './ms.css';
+import arrayHealthPlans from './utils/healthPlans';
 
 function Multiselecttest() {
 
-    // const options = [
-    //     { label: "Grapes 🍇", value: "grapes" },
-    //     { label: "Mango 🥭", value: "mango" },
-    //     { label: "Strawberry 🍓", value: "strawberry" }
-    // ];
-
     const [selected, setSelected] = useState([]);
+    const [checked, setChecked] = useState('');
 
     const healthPlan = [
         {label: "Amil", value: "Amil"},
@@ -32,19 +26,69 @@ function Multiselecttest() {
         {label: "Unimed", value: "Unimed"},
     ]
 
+    const animatedComponents = makeAnimated();
+
+    function handleSelected(selectedItems){
+        setSelected(selectedItems);
+    }    
+
+    var expanded = false;
+
+    function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }
+    }
+
+    function handleCheck(event) {
+        let newChecked = event.target.value;
+        setChecked(checked => [...checked, newChecked] )
+        console.log(checked);
+        
+    }
 
     return (
         <div>
-            <div>
-                <h1>Select Fruits</h1>
+            <div className="ms">
+                <h1>react-select</h1>
                 <pre>{JSON.stringify(selected)}</pre>
-                <MultiSelect
+                <Select
+                    placeholder="Select Option"
+                    closeMenuOnSelect={false}
+                    components={animatedComponents}
+                    isMulti
                     options={healthPlan}
                     value={selected}
-                    onChange={setSelected}
-                    labelledBy={"Select"}
+                    onChange={handleSelected} 
                 />
             </div>
+            <div>
+                <form>
+                    <div class="multiselect">
+                        <div class="selectBox" onClick={showCheckboxes}>
+                            <select>
+                                <option>Select an option</option>
+                            </select>
+                            <div class="overSelect"></div>
+                        </div>
+                        <div id="checkboxes">
+                            {
+                                arrayHealthPlans.map((healthPlan) => {
+                                    return (
+                                        <label><input type="checkbox" key={healthPlan} value={healthPlan} onChange={handleCheck}/>{healthPlan}</label>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </form>
+            </div>
+
         </div>
     );
 }

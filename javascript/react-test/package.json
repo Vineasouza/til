@@ -16,7 +16,10 @@
     "react-hook-form": "^6.5.3",
     "react-multi-select-component": "^3.0.4",
     "react-number-format": "^4.4.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "react-select": "^3.1.0",
+    "react-widgets": "^5.0.0-beta.21",
+    "semantic-ui-react": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

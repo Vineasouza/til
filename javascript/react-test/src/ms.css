@@ -1,0 +1,49 @@
+.ms {
+    width: 100%;
+}
+
+.multi-select {
+    --rmsc-main: #08082D;
+    --rmsc-hover: #f1f3f5;
+    --rmsc-selected: #e2e6ea;
+    --rmsc-border: #08082D;
+    --rmsc-gray: #aaa;
+    --rmsc-bg: #f4f4f4;
+    --rmsc-p: 14px; /* Spacing */
+    --rmsc-radius: 4px; /* Radius */
+    --rmsc-h: 30px; /* Height */
+}
+
+.multiselect {
+    width: 200px;
+  }
+  
+  .selectBox {
+    position: relative;
+  }
+  
+  .selectBox select {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+  }
+  
+  #checkboxes label {
+    display: block;
+  }
+  
+  #checkboxes label:hover {
+    background-color: #1e90ff;
+  }
