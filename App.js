@@ -10,7 +10,7 @@ export default function App() {
         source={require('./assets/initialImage.png')}
         style={{ width: 300, height: 300 }}
       />
-      <Text style={styles.mainText}>HI there! this is my first project!</Text>
+      <Text style={styles.mainText}>HI there! this is my first project! Lets Code!!</Text>
       <View style={styles.buttonContainer}>
         <Button
           onPress={() => {
