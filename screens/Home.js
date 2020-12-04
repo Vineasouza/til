@@ -7,10 +7,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('./assets/initialImage.png')}
+        source={require('../assets/homeImage.png')}
         style={{ width: 300, height: 300 }}
       />
-      <Text style={styles.mainText}>HI there! this is my first project!</Text>
+      <Text style={styles.mainText}>HOME SCREEN</Text>
       <View style={styles.buttonContainer}>
         <Button
           onPress={() => {
