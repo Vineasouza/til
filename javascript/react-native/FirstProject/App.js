@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttonContainer: {
-    margin: 15,
+    margin: 10,
     width: 150,
     borderRadius: 15,
   },
