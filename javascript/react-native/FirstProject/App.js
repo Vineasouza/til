@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native'
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
+import { TextInput } from 'react-native-gesture-handler';
 
 function HomeScreen({ navigation }) {
   return (
@@ -23,12 +24,18 @@ function HomeScreen({ navigation }) {
         </View>
         <View style={styles.buttonContainer}>
           <Button
+            onPress={() => navigation.navigate('Input')}
+            title="Go to input"
+            color= "#BA68C8"
+          />
+        </View>
+        <View style={styles.buttonContainer}>
+          <Button
             onPress={() => navigation.navigate('Error')}
             title="404 Error"
             color= "#BA68C8"
           />
         </View>
-        <StatusBar style="auto" />
       </View>
       <StatusBar style="auto" backgroundColor="#BA68C8" showHideTransition="fade"/>
     </View>
@@ -81,7 +88,29 @@ function ErrorScreen({ navigation }) {
             color= "#BA68C8"
           />
         </View>
-        <StatusBar style="auto" />
+      </View>
+      <StatusBar style="auto" backgroundColor="#BA68C8" showHideTransition="fade"/>
+    </View>
+  );
+}
+
+function InputScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={styles.container}>
+        <Text style={styles.mainText}>Input Component ⚙ </Text>
+        <View style={styles.containerInput}>
+          <View style={styles.input}>
+            <TextInput placeholder='Input Text' />
+          </View>
+        </View>
+        <View style={styles.buttonContainer}>
+          <Button
+            onPress={() => navigation.navigate('Home')}
+            title="Go back home"
+            color= "#BA68C8"
+          />
+        </View>
       </View>
       <StatusBar style="auto" backgroundColor="#BA68C8" showHideTransition="fade"/>
     </View>
@@ -97,6 +126,7 @@ export default function App() {
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
         <Drawer.Screen name="Error" component={ErrorScreen} />
+        <Drawer.Screen name="Input" component={InputScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
@@ -105,6 +135,8 @@ export default function App() {
 /* Styles CSS */
 const styles = StyleSheet.create({
   container: {
+    // backgroundColor: '#ccc',
+    width: 250,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -124,5 +156,19 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingVertical: 50,
     backgroundColor: '#f4f4f4',
+  },
+  input: {
+    color: '#333',
+    fontSize: 18,
+    lineHeight: 28,
+    borderColor:'#ccc',
+    borderWidth: 0.5,
+    borderRadius: 4,
+    fontFamily: 'sans-serif-light',
+    padding: 4,
+    width: 150,
+  },
+  containerInput: {
+    padding: 10,
   }
 });
