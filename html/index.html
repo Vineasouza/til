@@ -7,6 +7,38 @@
     <title>Document</title>
   </head>
   <body>
-    <progress value="50" max="100" />
+    <!-- <label for="ice-cream-choice">Choose a flavor:</label>
+    <input
+      list="ice-cream-flavors"
+      id="ice-cream-choice"
+      name="ice-cream-choice"
+    />
+    <datalist id="ice-cream-flavors">
+      <option value="Chocolate"></option>
+      <option value="Coconut"></option>
+      <option value="Mint"></option>
+      <option value="Strawberry"></option>
+      <option value="Vanilla"></option>
+    </datalist> -->
+
+    <button>change progress value</button>
+    <progress id="progresso" value="0" max="100" />
+    <script type="text/javascript" charset="utf-8">
+      document.addEventListener("DOMContentLoaded", function (event) {
+        /* DOM is ready, so we can query for its elements */
+        var progresso = document.getElementById("progresso").value;
+        console.log(progresso);
+
+        /*additional code for comment*/
+        document
+          .querySelector("button")
+          .addEventListener("click", function (event) {
+            document.getElementById("progresso").value += 10;
+            if (document.getElementById("progresso").value == 100) {
+              document.getElementById("progresso").value = 0;
+            }
+          });
+      });
+    </script>
   </body>
 </html>
