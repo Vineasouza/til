@@ -1,5 +1,5 @@
 # This is a workflow to auto merge pull request of Dependabot
-name: auto-merge
+name: automergedependabot
 
 on: [pull_request_target]
 
