@@ -10,4 +10,10 @@ updates:
     schedule:
       interval: "daily"
       time: '02:00'
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 50
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily"
+      time: '02:00'
+    open-pull-requests-limit: 50    
